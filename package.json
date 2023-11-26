@@ -8,6 +8,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
     "package:win": "electron-packager . edemo --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "keywords": [
