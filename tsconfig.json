@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["es5"],
-    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "CommonJS",
     "rootDir": "src",
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
     },
     "moduleResolution": "node",
     "resolveJsonModule": true,
