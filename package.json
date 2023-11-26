@@ -2,14 +2,16 @@
   "name": "edemo",
   "version": "1.0.0",
   "description": "edemo",
-  "main": "main.js",
+  "main": ".vite/build/window.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "build:win": "electron-builder --win",
     "build:linux": "electron-builder --linux",
-    "package:win": "electron-packager . edemo --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package:win": "electron-packager . edemo --platform=win32 --arch=x64 --out=dist --overwrite",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
   },
   "keywords": [
     "edemo"
@@ -23,8 +25,18 @@
     "@electron-forge/maker-squirrel": "^7.1.0",
     "@electron-forge/maker-zip": "^7.1.0",
     "@electron-forge/plugin-auto-unpack-natives": "^7.1.0",
+    "@electron-forge/plugin-vite": "^7.1.0",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "electron": "^27.1.2",
-    "electron-builder": "^24.9.1"
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.2"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
